@@ -39,3 +39,13 @@ const ktitle = TextStyle(
   fontSize: 25,
   fontWeight: FontWeight.w500,
 );
+const knxtday = TextStyle(
+  fontSize: 25,
+  color: Colors.black,
+  fontWeight: FontWeight.bold,
+);
+const kfinal = TextStyle(
+  fontSize: 20,
+  color: Colors.black,
+  fontWeight: FontWeight.w500,
+);

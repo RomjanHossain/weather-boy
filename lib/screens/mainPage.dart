@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weatherboy/myWidget/myListtile.dart';
 import 'package:weatherboy/service/myCard.dart';
 import 'package:weatherboy/utils/constain.dart';
+import 'secscreen.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
@@ -89,9 +90,22 @@ class _MyHomePageState extends State<MyHomePage> {
                           SizedBox(
                             width: 90,
                           ),
-                          Text(
-                            'Next 7 days >',
-                            style: knxttxt,
+                          GestureDetector(
+                            onTap: () {
+                              print('next page taped!');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return NextSDay();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Next 7 days >',
+                              style: knxttxt,
+                            ),
                           ),
                         ],
                       ),
