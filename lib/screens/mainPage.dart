@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weatherboy/myWidget/myListtile.dart';
 import 'package:weatherboy/service/myCard.dart';
 import 'package:weatherboy/utils/constain.dart';
 
@@ -36,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 flex: 4,
                 child: Container(
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
                         'Today',
@@ -44,6 +46,54 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text(
                         'Wed, 3 Dec',
                         style: ksmallText,
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        textBaseline: TextBaseline.alphabetic,
+                        children: [
+                          Text(
+                            '-1',
+                            style: kbigText,
+                            // textAlign: TextAlign.start,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 15),
+                            child: Text(
+                              '°C',
+                              style: ksmt,
+                              // textAlign: TextAlign.start,
+                            ),
+                          )
+                        ],
+                      ),
+                      Text(
+                        'Feels like -3°',
+                        style: kfadetxt,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 30),
+                            child: Text(
+                              'Today',
+                              style: ktimeStyle,
+                            ),
+                          ),
+                          Text(
+                            'Tomorrow',
+                            style: ktimeStyle,
+                          ),
+                          SizedBox(
+                            width: 90,
+                          ),
+                          Text(
+                            'Next 7 days >',
+                            style: knxttxt,
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -171,6 +221,51 @@ class _MyHomePageState extends State<MyHomePage> {
                       topLeft: Radius.circular(25),
                       topRight: Radius.circular(25),
                     ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    // crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          myListtile(
+                            title: '7.38am',
+                            subtitle: 'SUNRISE',
+                          ),
+                          myListtile(
+                            title: '4.50pm',
+                            subtitle: 'SUNSET',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          myListtile(
+                            title: '90%',
+                            subtitle: 'PRECIPITATION',
+                          ),
+                          myListtile(
+                            title: '77%',
+                            subtitle: 'HUMIDITY',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          myListtile(
+                            title: '11 km/h',
+                            subtitle: 'WIND',
+                          ),
+                          myListtile(
+                            title: '1015 hPa',
+                            subtitle: 'PRESSURE',
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
