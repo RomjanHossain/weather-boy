@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../utils/constain.dart';
 import '../myWidget/myList.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NextSDay extends StatefulWidget {
   @override
@@ -9,15 +10,31 @@ class NextSDay extends StatefulWidget {
 
 class _NextSDayState extends State<NextSDay> {
   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFF2F5F7),
         shadowColor: Colors.transparent,
-        title: const Text(
-          'AppBar Demo',
-          style: TextStyle(color: Colors.black),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          // textBaseline: TextBaseline.alphabetic,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 5),
+              child: Text(
+                'Dhaka, Bangladesh',
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+            Icon(
+              FontAwesomeIcons.angleDown,
+              color: Colors.black,
+            ),
+          ],
         ),
+        // title: myDropDown(),
         centerTitle: true,
         leading: IconButton(
             icon: Icon(
