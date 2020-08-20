@@ -12,7 +12,6 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^0.1.3
-  flutter_svg: ^0.18.0
 
 dev_dependencies:
   flutter_test:
@@ -22,7 +21,7 @@ flutter:
 
   assets:
     - assets/images/bg.jpg
-    - assets/images/menu.svg
+    - assets/images/menu2.png
   # fonts:
   #   - family: Schyler
   #     fonts:
