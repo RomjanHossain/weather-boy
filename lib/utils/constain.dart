@@ -49,3 +49,25 @@ const kfinal = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.w500,
 );
+
+const kfadeTemp = TextStyle(
+  fontSize: 25,
+  color: Colors.black,
+  fontWeight: FontWeight.w200,
+);
+const kTemp = TextStyle(
+  fontSize: 25,
+  color: Colors.black,
+  // fontWeight: FontWeight.w200,
+);
+
+const kfadeText = TextStyle(
+  fontSize: 15,
+  color: Colors.black,
+  fontWeight: FontWeight.w200,
+);
+const kfText = TextStyle(
+  fontSize: 15,
+  color: Colors.black,
+  // fontWeight: FontWeight.w200,
+);

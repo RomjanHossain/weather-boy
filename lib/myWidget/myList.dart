@@ -26,11 +26,11 @@ class CustomListItem extends StatelessWidget {
           ),
           Text(
             temp1,
-            style: kfinal,
+            style: kTemp,
           ),
           Text(
             temp2,
-            style: kfinal,
+            style: kfadeTemp,
           ),
         ],
       ),

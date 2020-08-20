@@ -29,6 +29,16 @@ class _MyHomePageState extends State<MyHomePage> {
             backgroundColor: Colors.transparent,
             title: Text('Kyiv, Ukraine'),
             centerTitle: true,
+            actions: [
+              IconButton(
+                  icon: Image.asset(
+                    'assets/images/menu2.png',
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    print('menu btn pressed0!');
+                  })
+            ],
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

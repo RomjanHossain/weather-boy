@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/constain.dart';
 import '../myWidget/myList.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
-
-// final String svgImg = 'assets/images/menu.svg';
-// final Widget svgIcon = SvgPicture.asset(svgImg, color: Colors.black);
 
 class NextSDay extends StatefulWidget {
   @override
@@ -16,7 +12,8 @@ class _NextSDayState extends State<NextSDay> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFF2F5F7),
+        shadowColor: Colors.transparent,
         title: const Text(
           'AppBar Demo',
           style: TextStyle(color: Colors.black),
@@ -31,7 +28,13 @@ class _NextSDayState extends State<NextSDay> {
             onPressed: () {
               Navigator.pop(context);
             }),
-        actions: [IconButton(icon: Icon(Icons.add), onPressed: () {})],
+        actions: [
+          IconButton(
+              icon: Image.asset('assets/images/menu2.png'),
+              onPressed: () {
+                print('menu btn pressed0!');
+              })
+        ],
       ),
       body: Container(
         color: Color(0xFFF2F5F7),
@@ -41,9 +44,12 @@ class _NextSDayState extends State<NextSDay> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Next 7 days',
-              style: knxtday,
+            Padding(
+              padding: const EdgeInsets.only(top: 30, left: 20, bottom: 0),
+              child: Text(
+                'Next 7 days',
+                style: knxtday,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(
@@ -58,53 +64,87 @@ class _NextSDayState extends State<NextSDay> {
               ),
             ),
             Divider(
-              color: Colors.black,
+              // color: Color(0xFF88FAFB),
+              color: Colors.black12,
               thickness: 2,
+              indent: 30,
+              endIndent: 30,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('data'),
-                Text('data'),
-                Text('data'),
-                Text('data'),
+                Padding(padding: EdgeInsets.only(left: 15)),
+                Expanded(child: Text('Precipitiation', style: kfText)),
+                Expanded(
+                    child: Text(
+                  '70%',
+                  style: kfadeText,
+                )),
+                Expanded(child: Text('Wind', style: kfText)),
+                Expanded(
+                    child: Text(
+                  '8 km/h',
+                  style: kfadeText,
+                )),
               ],
+            ),
+            SizedBox(
+              height: 20,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('data'),
-                Text('data'),
-                Text('data'),
-                Text('data'),
+                Padding(padding: EdgeInsets.only(left: 15)),
+                Expanded(
+                    child: Text(
+                  'Humidity',
+                  style: kfText,
+                )),
+                Expanded(
+                    child: Text(
+                  '65%',
+                  style: kfadeText,
+                )),
+                Expanded(child: Text('Pressure', style: kfText)),
+                Expanded(
+                    child: Text(
+                  '940 hPa',
+                  style: kfadeText,
+                )),
               ],
             ),
-            Container(
-              color: Color(0xFFFFFFFF),
-              height: MediaQuery.of(context).size.height / 1.7,
-              child: ListView.separated(
-                padding: const EdgeInsets.all(8),
-                itemCount: 6,
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    height: 55,
-                    // color: Colors.black12,
-                    child: Center(
-                      child: CustomListItem(
-                        myicon: Icons.ac_unit,
-                        day: 'Thusday, 4 Dec',
-                        temp1: '-1°',
-                        temp2: '-2°',
+            Expanded(
+              child: Container(
+                color: Color(0xFFFFFFFF),
+                height: MediaQuery.of(context).size.height / 1.7,
+                child: ListView.separated(
+                  padding: const EdgeInsets.all(8),
+                  scrollDirection: Axis.vertical,
+                  itemCount: 6,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      height: 55,
+                      // color: Colors.black12,
+                      child: Center(
+                        child: CustomListItem(
+                          myicon: Icons.ac_unit,
+                          day: 'Thusday, 4 Dec',
+                          temp1: '-1°',
+                          temp2: '-2°',
+                        ),
                       ),
-                    ),
-                  );
-                },
-                separatorBuilder: (BuildContext context, int index) =>
-                    const Divider(
-                  color: Colors.red,
-                  thickness: 2,
-                  indent: 30,
-                  endIndent: 30,
+                    );
+                  },
+                  separatorBuilder: (BuildContext context, int index) =>
+                      const Divider(
+                    // color: Color(0xFF88FAFB),
+                    color: Colors.black12,
+                    thickness: 2,
+                    indent: 30,
+                    endIndent: 30,
+                  ),
                 ),
               ),
             )
