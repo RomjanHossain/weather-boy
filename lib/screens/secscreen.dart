@@ -41,7 +41,7 @@ class _NextSDayState extends State<NextSDay> {
             Padding(
               padding: const EdgeInsets.only(bottom: 5),
               child: Text(
-                'Dhaka, Bangladesh',
+                'Tongi, BD',
                 style: TextStyle(color: Colors.black),
               ),
             ),
