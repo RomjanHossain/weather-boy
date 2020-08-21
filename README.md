@@ -6,9 +6,5 @@ A new Flutter project designed by [Humble designer](https://dribbble.com/shots/8
 
 Here some Screenshot of my App..........
 
-```
 ![First SS](ss/f.png)
 ![Second SS](ss/s.png)
-
-```
-
