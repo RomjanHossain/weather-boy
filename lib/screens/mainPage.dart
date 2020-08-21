@@ -203,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   thickness: .2,
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 3,
                   child: Container(
                     color: Colors.transparent,
                     width: double.infinity,
@@ -221,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             SmallCard(
                               icon: Icons.ac_unit,
-                              text: '-1',
+                              text: '-1°',
                               iconColor: Colors.black,
                             ),
                           ],
@@ -229,78 +229,78 @@ class _MyHomePageState extends State<MyHomePage> {
                         Column(
                           children: [
                             Text(
-                              'Now',
+                              '12 am',
                               style: ktimeStyle,
                             ),
                             SmallCard(
                               mycolor: Colors.transparent,
                               icon: Icons.ac_unit,
-                              text: '-1',
+                              text: '-1°',
                             ),
                           ],
                         ),
                         Column(
                           children: [
                             Text(
-                              'Now',
+                              '1 pm',
                               style: ktimeStyle,
                             ),
                             SmallCard(
                               mycolor: Color(0x0FFFFFFF),
                               icon: Icons.ac_unit,
-                              text: '-1',
+                              text: '-2°',
                             ),
                           ],
                         ),
                         Column(
                           children: [
                             Text(
-                              'Now',
+                              '2 pm',
                               style: ktimeStyle,
                             ),
                             SmallCard(
                               mycolor: Color(0x0FFFFFFF),
                               icon: Icons.ac_unit,
-                              text: '-1',
+                              text: '-2°',
                             ),
                           ],
                         ),
                         Column(
                           children: [
                             Text(
-                              'Now',
+                              '3 pm',
                               style: ktimeStyle,
                             ),
                             SmallCard(
                               mycolor: Color(0x0FFFFFFF),
-                              icon: Icons.ac_unit,
-                              text: '-1',
+                              icon: Icons.cloud,
+                              text: '-2°',
                             ),
                           ],
                         ),
                         Column(
                           children: [
                             Text(
-                              'Now',
+                              '4 pm',
                               style: ktimeStyle,
                             ),
                             SmallCard(
                               mycolor: Color(0x0FFFFFFF),
-                              icon: Icons.ac_unit,
-                              text: '-1',
+                              icon: Icons.cloud,
+                              text: '-4°',
                             ),
                           ],
                         ),
                         Column(
                           children: [
                             Text(
-                              'Now',
+                              '5 pm',
                               style: ktimeStyle,
                             ),
                             SmallCard(
                               mycolor: Color(0x0FFFFFFF),
-                              icon: Icons.ac_unit,
-                              text: '-1',
+                              icon: Icons.cloud,
+                              text: '-4°',
                             ),
                           ],
                         ),

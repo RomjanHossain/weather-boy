@@ -9,7 +9,24 @@ class NextSDay extends StatefulWidget {
 }
 
 class _NextSDayState extends State<NextSDay> {
-  @override
+  List<String> myDate = [
+    'Friday, 5 Dec',
+    'Saturday, 6 Dec',
+    'Sunday, 7 Dec',
+    'Monday, 8 Dec',
+    'Tuesday, 9 Dec',
+    'Wednesday, 10 Dec'
+  ];
+  List<IconData> myIcondata = [
+    Icons.ac_unit,
+    Icons.cloud,
+    Icons.cloud,
+    Icons.ac_unit,
+    Icons.ac_unit,
+    Icons.ac_unit,
+  ];
+  List<int> tem1 = [-2, -4, -4, -2, -5, -9];
+  List<int> tem2 = [-7, -8, -6, -5, -8, -11];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +94,7 @@ class _NextSDayState extends State<NextSDay> {
                 myicon: Icons.ac_unit,
                 day: 'Thusday, 4 Dec',
                 temp1: '-1°',
-                temp2: '-2°',
+                temp2: '-5°',
               ),
             ),
             Divider(
@@ -126,10 +143,12 @@ class _NextSDayState extends State<NextSDay> {
                 )),
                 Expanded(child: Text('Pressure', style: kfText)),
                 Expanded(
-                    child: Text(
-                  '940 hPa',
-                  style: kfadeText,
-                )),
+                  child: Text(
+                    '940 hPa',
+                    style: kfadeText,
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 50)),
               ],
             ),
             Expanded(
@@ -139,17 +158,17 @@ class _NextSDayState extends State<NextSDay> {
                 child: ListView.separated(
                   padding: const EdgeInsets.all(8),
                   scrollDirection: Axis.vertical,
-                  itemCount: 6,
+                  itemCount: myDate.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       height: 55,
                       // color: Colors.black12,
                       child: Center(
                         child: CustomListItem(
-                          myicon: Icons.ac_unit,
-                          day: 'Thusday, 4 Dec',
-                          temp1: '-1°',
-                          temp2: '-2°',
+                          myicon: myIcondata[index],
+                          day: myDate[index],
+                          temp1: '${tem1[index]}°',
+                          temp2: '${tem2[index]}°',
                         ),
                       ),
                     );
@@ -164,7 +183,7 @@ class _NextSDayState extends State<NextSDay> {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

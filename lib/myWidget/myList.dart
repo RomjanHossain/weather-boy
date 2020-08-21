@@ -13,7 +13,7 @@ class CustomListItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Icon(myicon),
@@ -22,7 +22,7 @@ class CustomListItem extends StatelessWidget {
             style: kfinal,
           ),
           SizedBox(
-            width: 100,
+            width: 80,
           ),
           Text(
             temp1,
